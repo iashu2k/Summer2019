@@ -1,5 +1,10 @@
 #!/bin/bash
+sudo apt update && sudo apt install git dkms
+cd Downloads
+git clone -b extended --single-branch https://github.com/lwfinger/rtlwifi_new.git
+unofficial
 cd ~/Downloads/rtlwifi_new/
 make
 sudo make install
 sudo /bin/sh -c 'echo "options rtl8723de ant_sel=2" >> /etc/modprobe.d/rtl8723de.conf'
+
